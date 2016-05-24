@@ -29,25 +29,28 @@
 #ignored.
 #
 ###################################################
-## Possible arguments: 
+## Possible arguments:
 ##  - clean : to sweap all built files
 ##  - dirs  : to build only in dirs
 ###################################################
 
 ## Is it a clean
 if  test "$1" = "clean" ; then
-   find . -name Makefile.in -exec rm {} \; -print
-   find . -name aclocal.m4 -exec rm {} \; -print
-   find . -name configure -exec rm {} \; -print
-   find . -name autom4te.cache -exec rm -r {} \; -print
+   find . -name Makefile.in -exec rm -f {} \; -print
+   find . -name aclocal.m4 -exec rm -f {} \; -print
+   find . -name configure -exec rm -f {} \; -print
+   find . -name autom4te.cache -exec rm -rf {} \; -print
    rm -f mkinstalldirs
    rm -f missing
    rm -f install-sh
    rm -f depcomp
    rm -f ylwrap
    rm -f distrib/alliance.spec
+   rm -f compile
+   rm -f configure.in
+   rm -f ltmain.sh
    exit
-fi 
+fi
 
 
 ## take parameters for directories or take all dirs by default
