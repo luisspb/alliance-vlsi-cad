@@ -1,6 +1,6 @@
 # alliance-vlsi-cad
 
-#(Inactive)
+# (Inactive)
 
 Personal fork of Alliance VLSI CAD project:  
 https://www-soc.lip6.fr/git/alliance.git  
